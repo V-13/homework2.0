@@ -1,0 +1,25 @@
+{
+  "name": "hw15",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/V-13/homework2-15-8-2019-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/V-13/homework2-15-8-2019-/issues"
+  },
+  "homepage": "https://github.com/V-13/homework2-15-8-2019-#readme",
+  "description": ""
+}
