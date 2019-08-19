@@ -18,16 +18,17 @@
               <div class="align-self-center">
               <div class="container">
                            <div class="row">
+                               <form action="/read" method="POST">
                                         <table class="table">
                                                 <tbody>
                                                     <tr>
-                                                        <td>username:</td><td><input type ="text" class="form-control"/> </td>
+                                                        <td>username:</td><td><input type ="text" name="n" class="form-control"/> </td>
                                                     </tr>
                                                     <tr>
-                                                        <td>password:</td><td><input type="text" class="form-control"/></td>
+                                                        <td>password:</td><td><input type="text" name="p" class="form-control"/></td>
                                                     </tr>
                                                     <tr>
-                                                        <td></td><td><button type=button class = "btn btn-success">login</button></td>
+                                                        <td></td><td><button type=submit class = "btn btn-success">login</button></td>
                                                     </tr>
 
                                                 </tbody>
@@ -38,7 +39,7 @@
                                                 
 
                                         </table>
-
+                                                </form>
                                            </div> 
                            </div>
               </div>
