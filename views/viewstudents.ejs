@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+                <a class="nav-item  nav-link " href="/">Home</a>
+    
+                    <a class="nav-item nav-link " href="/login">login</a>
+                    <a class="nav-item nav-link" href="reg">Registration</a> 
+              </nav>
+    
+              <div class="card-columns p-5">
+                    <% for(var i=0;i<data.length;i++){ %>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= data[i].n %></h5>
+                                    <p class="card-text"><strong>Address: </strong><%= data[i].a%><br><strong>gender: </strong><%= data[i].gender %></p>
+                                    <p class="card-text"><strong>dob:</strong><%=data[i].dob%><br><strong>email:</strong><%=data[i].email%><br><strong>username:</strong><%=data[i].uname%></p>
+                                    <p class="card-text"><strong>pass:</strong><%=data[i].upass%><br><p class="card-text"><strong>confirm-pass:</strong><%=data[i].upass1%>
+                                </div>
+                            </div>
+                    <% } %>
+                </div>
+    </body>
+</table>
+</body>
+</html>

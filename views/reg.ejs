@@ -17,22 +17,23 @@
 
     <div class="container">
         <div class="row">
+    <form action="/read" method="POST">
            <table class="table">
-               <tr><td>Name</td><td><input type="text" class="form-control"/></td></tr>
-               <tr><td>Address</td><td><input type="text" class="form-control"/></td></tr>
+               <tr><td>Name</td><td><input type="text" class="form-control" name="n"/></td></tr>
+               <tr><td>Address</td><td><input type="text" class="form-control" name="a"/></td></tr>
                <tr><td>Gender</td><td><input type="radio" name="gender" value="male">Male</td><td><input type="radio" name="gender" value="female">Female</td></tr>
                 <tr><td>District</td><td>
-                    <select class="form-control"><option>Ernakulam</option><option>Idukki</option><option>Thrissur</option>
+                    <select class="form-control" ><option >Ernakulam</option><option>Idukki</option><option>Thrissur</option>
                     </select>
                     </td></tr>
 
-               <tr><td>D.O.B</td><td><input type="date" class="form-control" /></td> </tr>
-               <tr><td>E-mail</td><td><input type="email" class="form-control" /></td></tr>
-               <tr><td>Username</td><td><input type="text"class="form-control"/></td></tr>
-               <tr><td>Password</td><td><input type="password" class="form-control"/></td></tr>
-               <tr><td>Confirm-pswd</td><td><input type="password" class="form-control"/></td></tr>
-               <tr><td><button type="reset" class="btn btn-warning">RESET</button></td>
-                    <td><button type="submit" class="btn btn-success" >SUBMIT</button></td>
+               <tr><td>D.O.B</td><td><input type="date" class="form-control"  name="dob"/></td> </tr>
+               <tr><td>E-mail</td><td><input type="email" class="form-control" name="email"/></td></tr>
+               <tr><td>Username</td><td><input type="text"class="form-control" name="uname"/></td></tr>
+               <tr><td>Password</td><td><input type="password" class="form-control" name="upass"/></td></tr>
+               <tr><td>Confirm-pswd</td><td><input type="password" class="form-control" name="upass1"/></td></tr>
+               <tr><td><button type="reset" class="btn btn-warning" name="reset">RESET</button></td>
+                    <td><button type="submit" class="btn btn-success" name="submit" >SUBMIT</button></td>
             </tr>
 
 
@@ -40,6 +41,7 @@
 
                     
            </table>
+           </form>
 
 
         </div>
