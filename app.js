@@ -82,7 +82,7 @@ app.get('/studentall',(req,res)=>{
 
 
 
-const APIurl ="https://student-reg1.herokuapp.com/studentall"
+const APIurl ="http://student-reg1.herokuapp.com/studentall"
 
  
     app.get('/viewstudents',(req,res)=>{
@@ -119,7 +119,7 @@ const APIurl ="https://student-reg1.herokuapp.com/studentall"
     
     });
 
-    const APIurl2 ="https://student-reg1.herokuapp.com/studentname"
+    const APIurl2 ="http://student-reg1.herokuapp.com/studentname"
     app.post('/viewsinglestudent',(req,res)=>{
 
         var item = req.body.n;
@@ -151,7 +151,7 @@ const APIurl ="https://student-reg1.herokuapp.com/studentall"
     })
 
 
-    const APIurl3 = "https://student-reg1.herokuapp.com/deleteAPI"
+    const APIurl3 = "http://student-reg1.herokuapp.com/deleteAPI"
 
     app.post('/studdelete',(req,res)=>{
         var item = req.body.n;
