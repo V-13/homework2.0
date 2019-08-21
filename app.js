@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(Express.static(__dirname+"/public"));//public files css,images accessing
 app.use(bodyParser.urlencoded({extended:true}));
 
-Mongoose.connect("mongodb+srv://V-13:%23itsmyLife13@cluster0-bgs7t.mongodb.net/studentdb1?retryWrites=true&w=majority")
+Mongoose.connect("mongodb+srv://V-13:#itsmyLife13@cluster0-bgs7t.mongodb.net/studentdb1?retryWrites=true&w=majority")
 
 const StudentModel=Mongoose.model("studentdetails",{
     n:String,
