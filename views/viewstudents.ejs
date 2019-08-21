@@ -13,6 +13,9 @@
     
                     <a class="nav-item nav-link " href="/login">login</a>
                     <a class="nav-item nav-link" href="reg">Registration</a> 
+                    <a class="nav-item nav-link" href="/viewstudents">Viewstudents</a>
+                    <a class="nav-item nav-link" href='/searchstudent'>search</a>
+                    <a class="nav -item nav-link"href="/deletestudent">Delete student</a>
               </nav>
     
               <div class="card-columns p-5">
@@ -22,7 +25,7 @@
                                     <h5 class="card-title"><%= data[i].n %></h5>
                                     <p class="card-text"><strong>Address: </strong><%= data[i].a%><br><strong>gender: </strong><%= data[i].gender %></p>
                                     <p class="card-text"><strong>dob:</strong><%=data[i].dob%><br><strong>email:</strong><%=data[i].email%><br><strong>username:</strong><%=data[i].uname%></p>
-                                    <p class="card-text"><strong>pass:</strong><%=data[i].upass%><br><p class="card-text"><strong>confirm-pass:</strong><%=data[i].upass1%>
+                                    <p class="card-text"><strong>pass:</strong><%=data[i].upass%><br><strong>confirm-pass:</strong><%=data[i].upass1%></p>
                                 </div>
                             </div>
                     <% } %>
