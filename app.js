@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(Express.static(__dirname+"/public"));//public files css,images accessing
 app.use(bodyParser.urlencoded({extended:true}));
 
-Mongoose.connect("mongodb://localhost:27017/studentdb1")
+Mongoose.connect("mongodb+srv://V-13:#itsmyLife13@cluster0-bgs7t.mongodb.net/studentdb1?retryWrites=true&w=majority")
 
 const StudentModel=Mongoose.model("studentdetails",{
     n:String,
@@ -82,7 +82,7 @@ app.get('/studentall',(req,res)=>{
 
 
 
-const APIurl ="http://localhost:3001/studentall"
+const APIurl ="https://student-reg1.herokuapp.com/studentall"
 
  
     app.get('/viewstudents',(req,res)=>{
@@ -119,7 +119,7 @@ const APIurl ="http://localhost:3001/studentall"
     
     });
 
-    const APIurl2 ="http://localhost:3001/studentname"
+    const APIurl2 ="https://student-reg1.herokuapp.com/studentname"
     app.post('/viewsinglestudent',(req,res)=>{
 
         var item = req.body.n;
@@ -151,7 +151,7 @@ const APIurl ="http://localhost:3001/studentall"
     })
 
 
-    const APIurl3 = "http://localhost:3001/deleteAPI"
+    const APIurl3 = "https://student-reg1.herokuapp.com/deleteAPI"
 
     app.post('/studdelete',(req,res)=>{
         var item = req.body.n;
