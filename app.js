@@ -88,25 +88,25 @@ const APIurl ="http://student-reg1.herokuapp.com/studentall"
     app.get('/viewstudents',(req,res)=>{
 
         request(APIurl,(error,response,body)=>{
-            var data = JSON.parse(body);
-            res.render('viewstudents',{data:data});
+            var data = JSON.parse(body);         //all students details listed in "viewstudents" page,using studentall API
+            res.render('viewstudents',{data:data});              
         });
     });
     
 
     app.get('/searchstudent',(req,res)=>{
-        res.render('searchstudent');
+        res.render('searchstudent');             //search student page created.
     });
 
 
     app.get('/studentname',(req,res)=>{
-        var item = req.query.n;
+        var item = req.query.n;           //input cheytha name item il store cheythu
         //app.get('/emplyee/:id)
         //item=req.params.id;
         //var item = req.body.ename;
         //console.log(item);
-        var result = StudentModel.find({n:item},(error,data)=>{
-            if(error)
+        var result = StudentModel.find({n:item},(error,data)=>{  //mongodb le find({name:"vivek"}) pole work cheythu output kittunu.
+            if(error)                                            
             {
                 throw error;
                 res.send(error);
@@ -121,8 +121,8 @@ const APIurl ="http://student-reg1.herokuapp.com/studentall"
 
     const APIurl2 ="http://student-reg1.herokuapp.com/studentname"
     app.post('/viewsinglestudent',(req,res)=>{
-
-        var item = req.body.n;
+                                                    //studentname enna API vechu "view single student" pageil oralde details ,
+        var item = req.body.n;                     //mathram print cheyyunu.
     
         request(APIurl2+"/?n="+item,(error,response,body)=>{
             var data = JSON.parse(body);
@@ -132,7 +132,7 @@ const APIurl ="http://student-reg1.herokuapp.com/studentall"
 
     app.get('/deletestudent',(req,res)=>{
         res.render('deletestudent');
-    });
+    });                                      //deletestudent enna page create cheyyunu
 
     app.get('/deleteAPI',(req,res)=>{
         var item= req.query.n;
@@ -141,7 +141,7 @@ const APIurl ="http://student-reg1.herokuapp.com/studentall"
             if(error)
             {
                 throw error;
-                res.send(error);
+                res.send(error);                 //delete API ezhuthunu
             }
             else
             {
@@ -153,7 +153,7 @@ const APIurl ="http://student-reg1.herokuapp.com/studentall"
 
     const APIurl3 = "http://student-reg1.herokuapp.com/deleteAPI"
 
-    app.post('/studdelete',(req,res)=>{
+    app.post('/studdelete',(req,res)=>{                                    //delete cheyyunu.
         var item = req.body.n;
     
         request(APIurl3+"/?n="+item,(error,response,body)=>{
